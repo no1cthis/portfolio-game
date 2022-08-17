@@ -8,7 +8,8 @@ function Modal({children, title, noRedirect, github}) {
             <div className={cl.modal__content}>
                 <div className={cl.title}>{title}</div>
                             <div className={cl.content}>
-                                {children} {!noRedirect ? <span className={cl.span}>For back click on logo or back button in browser</span> : null} 
+                                {children} 
+                                {!noRedirect ? <span className={cl.span}>For back click back button in browser or you will spawn at start</span> : null} 
                             </div>
                             <div className={cl.menu}>
                                 <div> press Esc to close</div>

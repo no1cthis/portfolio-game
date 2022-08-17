@@ -78,23 +78,20 @@ function Game({setOpenModal, modals, setModal}) {
                 }
                 if(isCodeEditorArea){
                     if(modalsLocal.codeEditor){
-                        navigate('/code-editor')
+                        window.location.href = 'https://no1cthis.github.io/code-editor'
                     }
                     modalsLocal.codeEditor=true  
                     setModal(modalsLocal)
                     break;
                 }
                 if(isComingSoonArea){
-                    if(modalsLocal.comingSoon){
-                        navigate('/')
-                    }
                     modalsLocal.comingSoon=true  
                     setModal(modalsLocal)
                     break;
                 }
                 if(isHolographArea){
                     if(modalsLocal.holograph){
-                        navigate('/holograph')
+                        window.location.href = 'https://no1cthis.github.io/holograph'
                     }
                     modalsLocal.holograph=true  
                     setModal(modalsLocal)
@@ -102,7 +99,7 @@ function Game({setOpenModal, modals, setModal}) {
                 }
                 if(isBgArea){
                     if(modalsLocal.bg){
-                        navigate('/canvas-bg')
+                        window.location.href = 'https://no1cthis.github.io/canvas-bg'
                     }
                     modalsLocal.bg=true  
                     setModal(modalsLocal)
@@ -110,7 +107,7 @@ function Game({setOpenModal, modals, setModal}) {
                 }
                 if(isTestCompany1Area){
                     if(modalsLocal.testCompany1){
-                        navigate('/test-assignment-1')
+                        window.location.href = 'https://no1cthis.github.io/test-assignment-1'
                     }
                     modalsLocal.testCompany1=true  
                     setModal(modalsLocal)
@@ -118,7 +115,7 @@ function Game({setOpenModal, modals, setModal}) {
                 }
                 if(isWeatherArea){
                     if(modalsLocal.weather){
-                        navigate('/weather-app')
+                        window.location.href = 'https://no1cthis.github.io/weather-app'
                     }
                     modalsLocal.weather=true  
                     setModal(modalsLocal)
