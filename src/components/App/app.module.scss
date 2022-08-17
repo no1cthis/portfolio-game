@@ -1,0 +1,20 @@
+a{
+    text-decoration: none;
+    color: gray;
+    transition-duration: 0.3s;
+
+    &:hover{
+        color: #1530A4;
+        transform: scale(1.05);
+    }
+
+    &:active{
+        color: #00A9FF;
+        transform: scale(0.8);
+    }
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
