@@ -18,7 +18,6 @@ import ComingSoonBoard from "../Boards/ComingSoonBoard/ComingSoonBoard";
 
 
 function App() {
-  const location = useLocation();
   const [isOpenModal, setOpenModal] = useState(false)  
   const [modals, setModal] = useState({
     welcomePage:    false,
@@ -38,30 +37,20 @@ function App() {
     return false
   }
 
-  function game(){
-    return(
-    <>
-          <Game isOpenModal = {isOpenModal} setOpenModal = {setOpenModal} modals = {modals} setModal = {setModal}/>
-          {isOpenModal && !isModalOpen() ? <OpenModal isOpenModal={isOpenModal}/> : null}
-          {modals.welcomePage        ?     <WelcomeBoard/>       : null}
-          {modals.codeEditor         ?     <CodeEditorBoard/>    : null}
-          {modals.comingSoon         ?     <ComingSoonBoard/>    : null}
-          {modals.holograph          ?     <HolographBoard/>     : null}
-          {modals.bg                 ?     <BgBoard/>            : null}
-          {modals.testCompany1       ?     <TestCompany1Board/>  : null}
-          {modals.weather            ?     <WeatherBoard/>       : null}
-    </>
-    )
-  }
+
 
   return (
-    <>
-          <AnimatePresence exitBeforeEnter initial={false}>
-              <Routes location={location} key={location.pathname}>
-                  <Route path="/"                       element={game()}/>
-              </Routes>
-          </AnimatePresence>
-    </>
+      <>
+            <Game isOpenModal = {isOpenModal} setOpenModal = {setOpenModal} modals = {modals} setModal = {setModal}/>
+            {isOpenModal && !isModalOpen() ? <OpenModal isOpenModal={isOpenModal}/> : null}
+            {modals.welcomePage        ?     <WelcomeBoard/>       : null}
+            {modals.codeEditor         ?     <CodeEditorBoard/>    : null}
+            {modals.comingSoon         ?     <ComingSoonBoard/>    : null}
+            {modals.holograph          ?     <HolographBoard/>     : null}
+            {modals.bg                 ?     <BgBoard/>            : null}
+            {modals.testCompany1       ?     <TestCompany1Board/>  : null}
+            {modals.weather            ?     <WeatherBoard/>       : null}
+      </>
   );
 }
 

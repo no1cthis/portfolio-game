@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useMemo, useRef } from 'react';
-import {useNavigate} from 'react-router-dom'
 
 import areas from './img/Layers.json'
 
@@ -14,8 +13,6 @@ import frontPng from './img/front.png'
 import cl from'./game.module.scss'
 
 function Game({setOpenModal, modals, setModal}) {
-
-    const navigate = useNavigate()
 
     const canvas    = useRef(null)
     const ctx       = useRef(null)
